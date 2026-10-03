@@ -1,0 +1,54 @@
+
+
+.title{ 
+  font-family: "Ubuntu", sans-serif;
+  font-size: 2.986 rem; 
+  font-weight: 700; 
+  color: grey;
+}
+
+h1{
+    font-size: 2.986rem;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+
+}
+
+h2{
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-size: 2.488rem;
+
+}
+
+h3{
+  font-size: 2.074rem;
+  font-weight: 700;
+  font-family: "Ubuntu", sans-serif;
+}
+
+h4{
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-size: 1.728rem;
+}
+
+p{
+    font-family: "Ubuntu", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.emphasis{ 
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1rem; 
+  font-weight: 700;
+}
+
+.link{ 
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1rem; 
+  font-weight: 400; 
+  text-decoration: underline;
+  color: darkblue; 
+}
