@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Components · Simple Design System</title>
+<meta name="description" content="The three components in the Figma library, each with a live example, CSS specifications and accessibility guidelines.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&family=Quicksand:wght@400;600;700&display=swap">
+<link rel="icon" type="image/svg+xml" href="img/logo-reverse.svg">
+<link rel="stylesheet" href="vendor/bootstrap.min.css">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<header>
+<nav class="navbar navbar-expand-lg navbar-dark ds-navbar" aria-label="Design system">
+  <div class="container-xl">
+    <a class="navbar-brand" href="index.html"><img src="img/logo-reverse.svg" alt="" width="53" height="50"><span>Simple Design System</span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#siteNav" aria-controls="siteNav" aria-expanded="false" aria-label="Open navigation menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="siteNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Foundations</a>
+          <ul class="dropdown-menu dropdown-menu-end"><li><a class="dropdown-item" href="color.html">Color</a></li><li><a class="dropdown-item" href="typography.html">Typography</a></li><li><a class="dropdown-item" href="logo.html">Logo</a></li></ul>
+        </li>
+        <li class="nav-item"><a class="nav-link active" href="components.html" aria-current="page">Components</a></li>
+        <li class="nav-item"><a class="nav-link" href="page-pattern.html">Page pattern</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+</header>
+<main id="main" class="doc-main">
+<div class="container-xl doc-container">
+  <h1>Components</h1>
+  <p class="doc-lede">The three components in the Figma library, each with a live example, CSS specifications and accessibility guidelines.</p>
+  
+<div class="placeholder-note mt-3" role="note">Sizes and spacing come from DESIGN.md. Colors follow the Figma components: the overview table heading row has no fill and Dark Orange text, and the TL;DR box is filled with Warm Orange at 30% opacity.</div>
+<nav aria-label="Components on this page" class="mt-4"><ul class="list-inline mb-0">
+  <li class="list-inline-item"><a href="#navbar">Navbar</a></li>
+  <li class="list-inline-item"><a href="#overview-table">Overview table</a></li>
+  <li class="list-inline-item"><a href="#tldr">TL;DR chart box</a></li>
+</ul></nav>
+<section class="doc-section" id="navbar" aria-labelledby="navbar-h">
+  <h2 id="navbar-h">Navbar</h2>
+  <p style="max-width:65ch">The site header. It has two variants in Figma: <strong>Default</strong> for desktop and tablet, with the logo and three text links, and <strong>Mobile</strong>, with the logo and a hamburger menu. Bootstrap switches between them at the 768px breakpoint.</p>
+  <h3 class="doc-subhead">Default (desktop and tablet)</h3>
+<div class="preview-frame preview-frame--flush"><nav class="navbar navbar-expand-md navbar-dark ds-navbar" aria-label="Example">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><img src="img/logo-reverse.svg" alt="Home" width="61" height="60"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#demoNav1" aria-controls="demoNav1" aria-expanded="false" aria-label="Open menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="demoNav1">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Resume</a></li>
+      </ul>
+    </div>
+  </div>
+</nav></div>
+<h3 class="doc-subhead">Mobile (below 768px)</h3>
+<div class="preview-frame preview-frame--flush" style="max-width:402px"><nav class="navbar navbar-dark ds-navbar" aria-label="Mobile example">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><img src="img/logo-reverse.svg" alt="Home" width="60" height="57"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#demoNavMobile" aria-controls="demoNavMobile" aria-expanded="false" aria-label="Open menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="demoNavMobile">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Resume</a></li>
+      </ul>
+    </div>
+  </div>
+</nav></div>
+  
+  <div class="row g-4 mt-1">
+    <div class="col-lg-6" style="min-width:0">
+      <h3 class="doc-subhead">Specifications</h3>
+      <div class="table-scroll"><table class="table spec-table">
+<thead><tr><th scope="col">Property</th><th scope="col">Value</th><th scope="col">Token</th></tr></thead>
+<tbody><tr><th scope="row">Height</th><td>60px (57px mobile)</td><td><code>--nav-height</code></td></tr><tr><th scope="row">Background</th><td>Navbar Dark #071500</td><td><code>--color-navbar-dark</code></td></tr><tr><th scope="row">Logo</th><td>61 × 60 (60 × 57 mobile)</td><td><code>img/nav-logo</code></td></tr><tr><th scope="row">Link font</th><td>Oxygen 400, 20px (1.25rem)</td><td><code>--font-body, --fs-nav</code></td></tr><tr><th scope="row">Link color</th><td>White #FFFFFF</td><td><code>--color-white</code></td></tr><tr><th scope="row">Link padding</th><td>10px all sides</td><td><code>--space-10</code></td></tr><tr><th scope="row">Link order</th><td>Home, About, Resume</td><td><code>—</code></td></tr><tr><th scope="row">End spacer</th><td>18px</td><td><code>—</code></td></tr><tr><th scope="row">Hamburger</th><td>33 × 34 icon, 78 × 57 frame</td><td><code>—</code></td></tr></tbody></table></div>
+      <h3 class="doc-subhead">CSS</h3>
+      <pre class="code"><code>.ds-navbar {
+  background: var(--color-navbar-dark);   /* #071500 */
+  min-height: var(--nav-height);          /* 60px */
+}
+.ds-navbar .nav-link {
+  font: 400 var(--fs-nav)/1.3 var(--font-body);  /* Oxygen 20px */
+  color: var(--color-white);
+  padding: var(--space-10);               /* 10px */
+  border-bottom: 3px solid transparent;
+}
+.ds-navbar .nav-link:hover,
+.ds-navbar .nav-link:focus-visible { color: var(--color-warm-orange); }
+.ds-navbar .nav-link[aria-current=&quot;page&quot;] {
+  border-bottom-color: var(--color-dark-orange);
+}
+.ds-navbar :focus-visible {
+  outline: 2px solid var(--color-warm-orange);
+  outline-offset: 2px;
+}</code></pre>
+    </div>
+    <div class="col-lg-6" style="min-width:0">
+      <h3 class="doc-subhead">Accessibility</h3>
+      <ul class="a11y-list"><li>Wrap it in <code>&lt;nav aria-label="Main"&gt;</code> inside the page <code>&lt;header&gt;</code> so screen readers list it as a landmark.</li><li>Mark the current page with <code>aria-current="page"</code>; the orange underline shows the same thing visually.</li><li>The hamburger is a real <code>&lt;button&gt;</code> with <code>aria-label="Open menu"</code>, <code>aria-controls</code> and <code>aria-expanded</code> that flips between true and false.</li><li>All links and the hamburger are reachable with Tab and open with Enter or Space. Focus shows a 2px Warm Orange ring (9.4:1 on Navbar Dark).</li><li>White on Navbar Dark is 18.8:1, well above the 4.5:1 minimum.</li><li>Tap targets are at least 44 × 44px (each link is 60px tall).</li><li>Add a "Skip to main content" link before the navbar so keyboard users can jump past it.</li></ul>
+    </div>
+  </div>
+</section><section class="doc-section" id="overview-table" aria-labelledby="overview-table-h">
+  <h2 id="overview-table-h">Overview table</h2>
+  <p style="max-width:65ch">A one-row summary of a project placed under the page title: four columns, a heading row and an information row. Figma size 940 × 89 (632px wide in the page layout).</p>
+  <div class="preview-frame"><div class="table-scroll">
+<table class="ds-overview-table" aria-label="Project overview">
+  <thead><tr><th scope="col">Role</th><th scope="col">Timeline</th><th scope="col">Client</th><th scope="col">Focus</th></tr></thead>
+  <tbody><tr><td>Information here</td><td>Information here</td><td>Information here</td><td>Information here</td></tr></tbody>
+</table>
+</div></div><p class="small text-body-secondary mt-2">Example content. Figma only shows the structure.</p>
+  
+  <div class="row g-4 mt-1">
+    <div class="col-lg-6" style="min-width:0">
+      <h3 class="doc-subhead">Specifications</h3>
+      <div class="table-scroll"><table class="table spec-table">
+<thead><tr><th scope="col">Property</th><th scope="col">Value</th><th scope="col">Token</th></tr></thead>
+<tbody><tr><th scope="row">Columns</th><td>4, equal width (235px at 940px)</td><td><code>—</code></td></tr><tr><th scope="row">Heading row height</th><td>35px</td><td><code>—</code></td></tr><tr><th scope="row">Information row height</th><td>54px (39px in layout)</td><td><code>—</code></td></tr><tr><th scope="row">Cell padding</th><td>10px</td><td><code>--space-10</code></td></tr><tr><th scope="row">Heading font</th><td>Quicksand 600, 25px (1.563rem)</td><td><code>--fs-chart</code></td></tr><tr><th scope="row">Heading fill</th><td>None</td><td><code>—</code></td></tr><tr><th scope="row">Heading text</th><td>Dark Orange #B75C00</td><td><code>--color-dark-orange</code></td></tr><tr><th scope="row">Cell font</th><td>Oxygen 400, 16px (1rem)</td><td><code>--fs-p</code></td></tr><tr><th scope="row">Border</th><td>1px Light Grey #999999 around the whole table and between cells</td><td><code>--color-light-grey</code></td></tr><tr><th scope="row">Corner radius</th><td>10px</td><td><code>--radius-lg</code></td></tr></tbody></table></div>
+      <h3 class="doc-subhead">CSS</h3>
+      <pre class="code"><code>.ds-overview-table {
+  width: 100%;
+  border: 1px solid var(--color-light-grey);
+  border-radius: var(--radius-lg);        /* 10px */
+  border-collapse: separate;
+  border-spacing: 0;                      /* outer border wraps the whole table */
+}
+.ds-overview-table th,
+.ds-overview-table td { padding: var(--space-10); width: 25%; }
+.ds-overview-table thead th {
+  background: transparent;                /* no fill */
+  color: var(--color-dark-orange);        /* #B75C00 */
+  font: 600 var(--fs-chart) var(--font-heading);
+}
+.ds-overview-table tbody td {
+  font: 400 var(--fs-p) var(--font-body);
+  border-top: 1px solid var(--color-light-grey);
+}</code></pre>
+    </div>
+    <div class="col-lg-6" style="min-width:0">
+      <h3 class="doc-subhead">Accessibility</h3>
+      <ul class="a11y-list"><li>Build it as a real <code>&lt;table&gt;</code> with <code>&lt;th scope="col"&gt;</code> headings so screen readers announce the heading with each value.</li><li>Name the table with <code>aria-label="Project overview"</code>, or a visible <code>&lt;caption&gt;</code>. Avoid a visually hidden caption inside a scrolling wrapper; it can clip the table border.</li><li>Dark Orange text on White is 4.6:1, which passes WCAG AA for text at any size. It was darkened from the original #F29100 (2.4:1) for this reason, so don't swap the old value back in.</li><li>On phones, let the table scroll sideways inside its own container rather than squashing the columns, or stack it into label and value pairs.</li><li>The Light Grey border is decorative; the headings carry the structure, so the 2.8:1 border contrast is acceptable.</li></ul>
+    </div>
+  </div>
+</section><section class="doc-section" id="tldr" aria-labelledby="tldr-h">
+  <h2 id="tldr-h">TL;DR chart box</h2>
+  <p style="max-width:65ch">A short summary card filled with Warm Orange at 30% opacity. The title bar overlaps the body box by 11px. The tablet layout shows three in a row under a "TL;DR" label. Figma size 204 × 125 (240 × 131 in layout).</p>
+  <div class="preview-frame"><div class="row g-3">
+  <div class="col-sm-6 col-lg-4"><section class="ds-tldr" aria-labelledby="tldr-demo-1">
+    <h3 class="ds-tldr__title" id="tldr-demo-1">Title</h3>
+    <div class="ds-tldr__body"><p>Put tl;dr information in this box!</p></div>
+  </section></div>
+</div></div>
+  
+  <div class="row g-4 mt-1">
+    <div class="col-lg-6" style="min-width:0">
+      <h3 class="doc-subhead">Specifications</h3>
+      <div class="table-scroll"><table class="table spec-table">
+<thead><tr><th scope="col">Property</th><th scope="col">Value</th><th scope="col">Token</th></tr></thead>
+<tbody><tr><th scope="row">Size</th><td>204 × 125 (240 × 131 in layout)</td><td><code>—</code></td></tr><tr><th scope="row">Layout</th><td>Vertical stack, gap −11px</td><td><code>—</code></td></tr><tr><th scope="row">Title bar</th><td>43px tall, 10px padding</td><td><code>--space-10</code></td></tr><tr><th scope="row">Title font</th><td>Quicksand 600, 25px (1.563rem)</td><td><code>--fs-chart</code></td></tr><tr><th scope="row">Title fill</th><td>Warm Orange at 30% opacity</td><td><code>--color-warm-orange-30</code></td></tr><tr><th scope="row">Body</th><td>58px tall, 10px padding</td><td><code>--space-10</code></td></tr><tr><th scope="row">Body fill</th><td>Warm Orange at 30% opacity</td><td><code>--color-warm-orange-30</code></td></tr><tr><th scope="row">Body font</th><td>Oxygen 400</td><td><code>--font-body</code></td></tr><tr><th scope="row">Border</th><td>None</td><td><code>—</code></td></tr><tr><th scope="row">Corner radius</th><td>10px</td><td><code>--radius-lg</code></td></tr></tbody></table></div>
+      <h3 class="doc-subhead">CSS</h3>
+      <pre class="code"><code>.ds-tldr__title {
+  background: var(--color-warm-orange-30); /* #EDAA46 at 30% = #FAE6C8 */
+  color: var(--color-black);
+  font: 600 var(--fs-chart) var(--font-heading);
+  padding: var(--space-10);
+  border-radius: var(--radius-lg);
+  position: relative; z-index: 1;
+}
+.ds-tldr__body {
+  margin-top: -11px;                      /* Figma gap: -11px */
+  padding: calc(var(--space-10) + 11px) var(--space-10) var(--space-10);
+  border: none;
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+  background: var(--color-warm-orange-30);
+}</code></pre>
+    </div>
+    <div class="col-lg-6" style="min-width:0">
+      <h3 class="doc-subhead">Accessibility</h3>
+      <ul class="a11y-list"><li>Make each box a <code>&lt;section&gt;</code> labeled by its title (<code>aria-labelledby</code>), and use a real heading for the title at the right level for the page.</li><li>Black on the 30% Warm Orange fill is 17.2:1. Don't use white text on it.</li><li>The 30% fill is flattened onto White as <code>#FAE6C8</code>, so the 11px area where the title overlaps the body doesn't get darker. Only place the box on a White background.</li><li>Keep each box to one or two short sentences. Don't put the only copy of important information in the TL;DR; repeat it in the body.</li><li>Use a grid that stacks to one column on phones so text never gets squeezed.</li><li>Don't set a fixed height; let the box grow when text is enlarged or zoomed to 200%.</li></ul>
+    </div>
+  </div>
+</section>
+</div>
+</main>
+<footer class="doc-footer">
+  <div class="container-xl doc-container">HCI 472 Simple Design System · Al Rajala, November 2026 · Built with Bootstrap 5.3 from DESIGN.md</div>
+</footer>
+<script src="vendor/bootstrap.bundle.min.js"></script>
+</body>
+</html>

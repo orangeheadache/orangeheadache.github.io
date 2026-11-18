@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page pattern · Simple Design System</title>
+<meta name="description" content="A live Bootstrap build of the Clean Pages layout.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&family=Quicksand:wght@400;600;700&display=swap">
+<link rel="icon" type="image/svg+xml" href="img/logo-reverse.svg">
+<link rel="stylesheet" href="vendor/bootstrap.min.css">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<header>
+<nav class="navbar navbar-expand-lg navbar-dark ds-navbar" aria-label="Design system site">
+  <div class="container-xl">
+    <a class="navbar-brand" href="index.html"><img src="img/logo-reverse.svg" alt="" width="53" height="50"><span>Simple Design System</span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#siteNav" aria-controls="siteNav" aria-expanded="false" aria-label="Open navigation menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="siteNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Foundations</a>
+          <ul class="dropdown-menu dropdown-menu-end"><li><a class="dropdown-item" href="color.html">Color</a></li><li><a class="dropdown-item" href="typography.html">Typography</a></li><li><a class="dropdown-item" href="logo.html">Logo</a></li></ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="components.html">Components</a></li>
+        <li class="nav-item"><a class="nav-link active" href="page-pattern.html" aria-current="page">Page pattern</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+</header>
+<div class="container-xl doc-container"><p class="doc-eyebrow mt-4 mb-2">Page pattern</p><p class="small text-body-secondary mb-0">Below is the portfolio page as it would ship. The bar under this note is the page's own navbar.</p></div>
+<div class="mt-3"><header>
+<nav class="navbar navbar-expand-md navbar-dark ds-navbar" aria-label="Main">
+  <div class="container" style="max-width:var(--container-desktop)">
+    <a class="navbar-brand" href="#"><img src="img/logo-reverse.svg" alt="Home" width="61" height="60"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#ppNav" aria-controls="ppNav" aria-expanded="false" aria-label="Open menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="ppNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Resume</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+</header>
+<main id="main" class="pp-main">
+  <div class="container" style="max-width:var(--container-desktop)">
+    
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-10 col-lg-8">
+        <h1 class="pp-title">Open Books Content Organization</h1>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-10 col-lg-8">
+        <div class="table-scroll">
+          <table class="ds-overview-table" aria-label="Project overview">
+            <thead><tr><th scope="col">Role</th><th scope="col">Timeline</th><th scope="col">Client</th><th scope="col">Focus</th></tr></thead>
+            <tbody><tr><td>Researcher</td><td>Jan - Mar 2026</td><td>Open Books</td><td>IA, Navigation</td></tr></tbody>
+          </table>
+        </div>
+        <figure class="pp-figure"><img src="img/open books header image.png"></figure>
+      </div>
+    </div>
+
+    <section class="pp-section" aria-labelledby="tldr-label">
+      <h2 id="tldr-label" class="pp-tldr-label">TL;DR</h2>
+      <div class="row g-3">
+        <div class="col-12 col-md-4"><section class="ds-tldr" aria-labelledby="t1"><h3 class="ds-tldr__title" id="t1">Problem</h3><div class="ds-tldr__body"><p>Open Book’s navigation was inconsistent, redundant, and poorly labelled, making it difficult for users to effectively use the site. </p></div></section></div>
+        <div class="col-12 col-md-4"><section class="ds-tldr" aria-labelledby="t2"><h3 class="ds-tldr__title" id="t2">Process</h3><div class="ds-tldr__body"><p>Performed a content inventory, created a new organizational framework and tested it using card sorting and tree testing. </p></div></section></div>
+        <div class="col-12 col-md-4"><section class="ds-tldr" aria-labelledby="t3"><h3 class="ds-tldr__title" id="t3">Outcome</h3><div class="ds-tldr__body"><p>A new sitemap with more clarity, helping users more easily navigate the site and engage with their content. </p></div></section></div>
+      </div>
+    </section>
+
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-10 col-lg-8">
+        <section class="pp-section" aria-labelledby="introduction">
+  <h2 id="introduction">Introduction</h2>
+  <p>This was a quarter-long project completed in a group of three for a Content Strategy and Information Architecture class during my master’s program. The aim of the project was to choose a website and restructure its navigation based on research conducted throughout the course of the class. We restructured the website Open Books, a Chicago based nonprofit that works to promote literacy through their programs. We chose this website because the information architecture left something to be desired and we thought we could improve upon it.</p>
+  
+</section>
+        <section class="pp-section" aria-labelledby="methods">
+  <h2 id="methods">Methods</h2>
+  <p>Our methods included: </p><br>
+  <ul>
+    <li>Content inventory (portion pictured below)</li>
+    <li>2 rounds of card sorting</li>
+    <li>2 rounds of tree testing</li>
+  </ul>
+  <figure class="pp-figure"><img src="img/Content Inventory Image.png"></figure>
+</section>
+        <section class="pp-section" aria-labelledby="my-role">
+  <h2 id="my-role">My Role</h2>
+  <p>As part of a 3 person team, I was specifically responsible for:</p><br>
+<ul>
+  <li>Managing the content inventory</li>
+  <li>Deciding what cards to include</li>
+  <li>Running tree testing</li>
+  <li>Making the final sitemap</li>
+  <li>Contributing to the final presentation</li>
+</ul>
+  
+</section>
+        <section class="pp-section" aria-labelledby="project-outcome">
+  <h2 id="project-outcome">Project Outcome</h2>
+  <p>Through our research, we found that the way the website was organized had a lot of redundancies and content in places that one wouldn’t expect it to be. We reorganized the content into a different organizational framework and ran that framework through several rounds of card sorting and tree testing, changing the framework and sitemap as the results indicated were necessary. In the end, we had a proposed sitemap for the new organization of the website which would make it much easier for users to achieve tasks like donating and volunteering when they used the site.</p>
+  
+</section>
+        <section class="pp-section" aria-labelledby="final-presentation">
+          <h2 id="final-presentation" class="pp-label">Final Presentation</h2>
+          <p>For more insight into this project, you can take a look at our final presentation.</p>
+        </section>
+        <section class="pp-section" aria-labelledby="final-sitemap">
+          <h2 id="final-sitemap" class="pp-label">Final Sitemap</h2>
+          <img src="img/final sitemap image.png">
+        </section>
+        <section class="pp-section" aria-labelledby="lessons-learned">
+  <h2 id="lessons-learned">Lessons Learned</h2>
+  <p>In the course of completing this project, I learned how to conduct user experience specific methodology like card sorts and tree tests. I also learned how to iterate through different rounds of these methodologies and change them based on the previous results to end up with something that was truly more efficient than the original product. If I had more time on this project, I would test the entire sitemap with some first click testing or task based usability testing to make sure that the new site structure made sense and then contact the organization with the proposed sitemap.</p>
+  
+</section>
+      </div>
+    </div>
+  </div>
+</main>
+</div>
+<footer class="doc-footer">
+  <div class="container-xl doc-container">HCI 472 Simple Design System · Al Rajala, November 2026 · Built with Bootstrap 5.3 from DESIGN.md</div>
+</footer>
+<script src="vendor/bootstrap.bundle.min.js"></script>
+</body>
+</html>

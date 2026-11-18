@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Color · Simple Design System</title>
+<meta name="description" content="Seven colors from the Figma Color section. Warm oranges and browns sit on a white page, with a near-black green for the navbar.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&family=Quicksand:wght@400;600;700&display=swap">
+<link rel="icon" type="image/svg+xml" href="img/logo-reverse.svg">
+<link rel="stylesheet" href="vendor/bootstrap.min.css">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<header>
+<nav class="navbar navbar-expand-lg navbar-dark ds-navbar" aria-label="Design system">
+  <div class="container-xl">
+    <a class="navbar-brand" href="index.html"><img src="img/logo-reverse.svg" alt="" width="53" height="50"><span>Simple Design System</span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#siteNav" aria-controls="siteNav" aria-expanded="false" aria-label="Open navigation menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="siteNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Foundations</a>
+          <ul class="dropdown-menu dropdown-menu-end"><li><a class="dropdown-item active" href="color.html" aria-current="page">Color</a></li><li><a class="dropdown-item" href="typography.html">Typography</a></li><li><a class="dropdown-item" href="logo.html">Logo</a></li></ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="components.html">Components</a></li>
+        <li class="nav-item"><a class="nav-link" href="page-pattern.html">Page pattern</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+</header>
+<main id="main" class="doc-main">
+<div class="container-xl doc-container">
+  <p class="doc-eyebrow">Foundations</p>
+  <h1>Color palette</h1>
+  <p class="doc-lede">Seven colors from the Figma Color section. Warm oranges and browns sit on a white page, with a near-black green for the navbar.</p>
+  
+<section class="doc-section" aria-labelledby="palette">
+  <h2 id="palette">Palette</h2>
+  <div class="row g-3"><div class="col-12 col-sm-6 col-lg-4">
+  <article class="swatch">
+    <div class="swatch__chip" style="background:var(--color-black); color:#FFFFFF" aria-hidden="true">Aa</div>
+    <div class="swatch__body">
+      <h3 class="swatch__name">Black</h3>
+      <p class="small text-body-secondary mb-2">Primary text, black and white logo.</p>
+      <dl>
+        <dt>Hex</dt><dd>#000000</dd>
+        <dt>RGB</dt><dd>0, 0, 0</dd>
+        <dt>CSS</dt><dd>var(--color-black)</dd>
+        <dt>On white</dt><dd><span class="badge-pass">21.0:1 AA</span></dd>
+        <dt>On black</dt><dd><span class="badge-fail">1.0:1 fails</span></dd>
+      </dl>
+    </div>
+  </article>
+</div><div class="col-12 col-sm-6 col-lg-4">
+  <article class="swatch">
+    <div class="swatch__chip" style="background:var(--color-dark-brown); color:#FFFFFF" aria-hidden="true">Aa</div>
+    <div class="swatch__body">
+      <h3 class="swatch__name">Dark Brown</h3>
+      <p class="small text-body-secondary mb-2">Text links and dark accents.</p>
+      <dl>
+        <dt>Hex</dt><dd>#412804</dd>
+        <dt>RGB</dt><dd>65, 40, 4</dd>
+        <dt>CSS</dt><dd>var(--color-dark-brown)</dd>
+        <dt>On white</dt><dd><span class="badge-pass">13.7:1 AA</span></dd>
+        <dt>On black</dt><dd><span class="badge-fail">1.5:1 fails</span></dd>
+      </dl>
+    </div>
+  </article>
+</div><div class="col-12 col-sm-6 col-lg-4">
+  <article class="swatch">
+    <div class="swatch__chip" style="background:var(--color-dark-orange); color:#FFFFFF" aria-hidden="true">Aa</div>
+    <div class="swatch__body">
+      <h3 class="swatch__name">Dark Orange</h3>
+      <p class="small text-body-secondary mb-2">Page headings, overview table heading text, active nav indicator.</p>
+      <dl>
+        <dt>Hex</dt><dd>#B75C00</dd>
+        <dt>RGB</dt><dd>183, 92, 0</dd>
+        <dt>CSS</dt><dd>var(--color-dark-orange)</dd>
+        <dt>On white</dt><dd><span class="badge-pass">4.6:1 AA</span></dd>
+        <dt>On black</dt><dd><span class="badge-pass">4.5:1 AA</span></dd>
+      </dl>
+    </div>
+  </article>
+</div><div class="col-12 col-sm-6 col-lg-4">
+  <article class="swatch">
+    <div class="swatch__chip" style="background:var(--color-warm-orange); color:#000000" aria-hidden="true">Aa</div>
+    <div class="swatch__body">
+      <h3 class="swatch__name">Warm Orange</h3>
+      <p class="small text-body-secondary mb-2">TL;DR box fill at 30% opacity, hover and focus on dark surfaces.</p>
+      <dl>
+        <dt>Hex</dt><dd>#EDAA46</dd>
+        <dt>RGB</dt><dd>237, 170, 70</dd>
+        <dt>CSS</dt><dd>var(--color-warm-orange)</dd>
+        <dt>On white</dt><dd><span class="badge-fail">2.0:1 fails</span></dd>
+        <dt>On black</dt><dd><span class="badge-pass">10.4:1 AA</span></dd>
+      </dl>
+    </div>
+  </article>
+</div><div class="col-12 col-sm-6 col-lg-4">
+  <article class="swatch">
+    <div class="swatch__chip" style="background:var(--color-navbar-dark); color:#FFFFFF" aria-hidden="true">Aa</div>
+    <div class="swatch__body">
+      <h3 class="swatch__name">Navbar Dark</h3>
+      <p class="small text-body-secondary mb-2">Navbar background, reverse logo background.</p>
+      <dl>
+        <dt>Hex</dt><dd>#071500</dd>
+        <dt>RGB</dt><dd>7, 21, 0</dd>
+        <dt>CSS</dt><dd>var(--color-navbar-dark)</dd>
+        <dt>On white</dt><dd><span class="badge-pass">18.8:1 AA</span></dd>
+        <dt>On black</dt><dd><span class="badge-fail">1.1:1 fails</span></dd>
+      </dl>
+    </div>
+  </article>
+</div><div class="col-12 col-sm-6 col-lg-4">
+  <article class="swatch">
+    <div class="swatch__chip" style="background:var(--color-white); color:#000000" style="box-shadow: inset 0 -1px 0 var(--color-surface)" aria-hidden="true">Aa</div>
+    <div class="swatch__body">
+      <h3 class="swatch__name">White</h3>
+      <p class="small text-body-secondary mb-2">Page background, text on dark surfaces.</p>
+      <dl>
+        <dt>Hex</dt><dd>#FFFFFF</dd>
+        <dt>RGB</dt><dd>255, 255, 255</dd>
+        <dt>CSS</dt><dd>var(--color-white)</dd>
+        <dt>On white</dt><dd><span class="badge-fail">1.0:1 fails</span></dd>
+        <dt>On black</dt><dd><span class="badge-pass">21.0:1 AA</span></dd>
+      </dl>
+    </div>
+  </article>
+</div><div class="col-12 col-sm-6 col-lg-4">
+  <article class="swatch">
+    <div class="swatch__chip" style="background:var(--color-light-grey); color:#000000" aria-hidden="true">Aa</div>
+    <div class="swatch__body">
+      <h3 class="swatch__name">Light Grey</h3>
+      <p class="small text-body-secondary mb-2">Borders and dividers only, not for text.</p>
+      <dl>
+        <dt>Hex</dt><dd>#999999</dd>
+        <dt>RGB</dt><dd>153, 153, 153</dd>
+        <dt>CSS</dt><dd>var(--color-light-grey)</dd>
+        <dt>On white</dt><dd><span class="badge-fail">2.8:1 fails</span></dd>
+        <dt>On black</dt><dd><span class="badge-pass">7.4:1 AA</span></dd>
+      </dl>
+    </div>
+  </article>
+</div></div>
+</section>
+<section class="doc-section" aria-labelledby="contrast">
+  <h2 id="contrast">Approved pairings</h2>
+  <p style="max-width:65ch">WCAG 2.2 AA needs 4.5:1 for normal text and 3:1 for large text (24px, or 18.66px bold) and for interface parts like borders and focus rings. Dark Orange was darkened from the original Figma #F29100 to #B75C00 so it passes 4.5:1 as text on White. Warm Orange is light, so it always carries black text.</p>
+  <div class="table-scroll">
+  <table class="table contrast-grid align-middle">
+    <thead><tr><th scope="col">Preview</th><th scope="col">Pair</th><th scope="col">Use</th><th scope="col">Contrast</th></tr></thead>
+    <tbody><tr><td><span class="contrast-sample" style="color:#000000;background:#FFFFFF">Sample</span></td><td>Black on White</td><td>Body text</td><td><span class="badge-pass">21.0:1 AA</span></td></tr><tr><td><span class="contrast-sample" style="color:#FFFFFF;background:#071500">Sample</span></td><td>White on Navbar Dark</td><td>Navbar links</td><td><span class="badge-pass">18.8:1 AA</span></td></tr><tr><td><span class="contrast-sample" style="color:#EDAA46;background:#071500">Sample</span></td><td>Warm Orange on Navbar Dark</td><td>Nav hover and focus</td><td><span class="badge-pass">9.4:1 AA</span></td></tr><tr><td><span class="contrast-sample" style="color:#412804;background:#FFFFFF">Sample</span></td><td>Dark Brown on White</td><td>Links</td><td><span class="badge-pass">13.7:1 AA</span></td></tr><tr><td><span class="contrast-sample" style="color:#B75C00;background:#FFFFFF">Sample</span></td><td>Dark Orange on White</td><td>Table heading text</td><td><span class="badge-pass">4.6:1 AA</span></td></tr><tr><td><span class="contrast-sample" style="color:#000000;background:#FAE6C8">Sample</span></td><td>Black on Warm Orange 30%</td><td>TL;DR box</td><td><span class="badge-pass">17.2:1 AA</span></td></tr><tr><td><span class="contrast-sample" style="color:#000000;background:#B75C00">Sample</span></td><td>Black on Dark Orange</td><td>Black text on solid orange</td><td><span class="badge-pass">4.5:1 AA</span></td></tr><tr><td><span class="contrast-sample" style="color:#FFFFFF;background:#B75C00">Sample</span></td><td>White on Dark Orange</td><td>White text on solid orange</td><td><span class="badge-pass">4.6:1 AA</span></td></tr><tr><td><span class="contrast-sample" style="color:#FFFFFF;background:#EDAA46">Sample</span></td><td>White on Warm Orange</td><td>Avoid</td><td><span class="badge-fail">2.0:1 fails</span></td></tr><tr><td><span class="contrast-sample" style="color:#999999;background:#FFFFFF">Sample</span></td><td>Light Grey on White</td><td>Avoid for text</td><td><span class="badge-fail">2.8:1 fails</span></td></tr></tbody>
+  </table>
+  </div>
+</section>
+<section class="doc-section" aria-labelledby="color-tokens">
+  <h2 id="color-tokens">CSS tokens</h2>
+<pre class="code"><code>:root {
+  --color-black: #000000;
+  --color-dark-brown: #412804;
+  --color-dark-orange: #B75C00;
+  --color-warm-orange: #EDAA46;
+  --color-navbar-dark: #071500;
+  --color-white: #FFFFFF;
+  --color-light-grey: #999999;
+}</code></pre>
+  <p class="small text-body-secondary mt-3">DESIGN.md also lists blue, crimson, red and purple. They come from the measurement markers on the Grids and Dimensions page, so they are not part of the brand palette.</p>
+</section>
+
+</div>
+</main>
+<footer class="doc-footer">
+  <div class="container-xl doc-container">HCI 472 Simple Design System · Al Rajala, November 2026 · Built with Bootstrap 5.3 from DESIGN.md</div>
+</footer>
+<script src="vendor/bootstrap.bundle.min.js"></script>
+</body>
+</html>

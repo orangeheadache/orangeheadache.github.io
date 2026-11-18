@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Logo · Simple Design System</title>
+<meta name="description" content="Two versions of the logo: a reverse version for the dark navbar and a black and white version for light backgrounds.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&family=Quicksand:wght@400;600;700&display=swap">
+<link rel="icon" type="image/svg+xml" href="img/logo-reverse.svg">
+<link rel="stylesheet" href="vendor/bootstrap.min.css">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<header>
+<nav class="navbar navbar-expand-lg navbar-dark ds-navbar" aria-label="Design system">
+  <div class="container-xl">
+    <a class="navbar-brand" href="index.html"><img src="img/logo-reverse.svg" alt="" width="53" height="50"><span>Simple Design System</span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#siteNav" aria-controls="siteNav" aria-expanded="false" aria-label="Open navigation menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="siteNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Foundations</a>
+          <ul class="dropdown-menu dropdown-menu-end"><li><a class="dropdown-item" href="color.html">Color</a></li><li><a class="dropdown-item" href="typography.html">Typography</a></li><li><a class="dropdown-item active" href="logo.html" aria-current="page">Logo</a></li></ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="components.html">Components</a></li>
+        <li class="nav-item"><a class="nav-link" href="page-pattern.html">Page pattern</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+</header>
+<main id="main" class="doc-main">
+<div class="container-xl doc-container">
+  <p class="doc-eyebrow">Foundations</p>
+  <h1>Logo</h1>
+  <p class="doc-lede">Two versions of the logo: a reverse version for the dark navbar and a black and white version for light backgrounds.</p>
+  
+<section class="doc-section" aria-labelledby="versions">
+  <h2 id="versions">Versions</h2>
+  <div class="row g-4">
+    <div class="col-md-6">
+      <div class="logo-stage logo-stage--dark"><img src="img/logo-reverse.svg" alt="Reverse logo" width="253" height="238"></div>
+      <h3 class="h4 mt-3">Reverse logo</h3>
+      <p>For dark backgrounds such as the Navbar Dark (#071500) bar. Figma size 253 × 238.</p>
+    </div>
+    <div class="col-md-6">
+      <div class="logo-stage logo-stage--light"><img src="img/logo-bw.svg" alt="Black and white logo" width="250" height="234"></div>
+      <h3 class="h4 mt-3">Black and white logo</h3>
+      <p>For white backgrounds, single-color printing and places where color isn't available. Figma size 250 × 234.</p>
+    </div>
+  </div>
+</section>
+<section class="doc-section" aria-labelledby="usage">
+  <h2 id="usage">Usage</h2>
+  <div class="row g-4">
+    <div class="col-md-6">
+      <h3 class="doc-subhead">Do</h3>
+      <ul class="a11y-list">
+        <li>Keep clear space around the logo of at least 10px at nav size, and about a quarter of the logo's width at larger sizes.</li>
+        <li>Use the reverse logo on Navbar Dark and the black and white logo on White.</li>
+        <li>Scale proportionally. The nav version is 61 × 60.</li>
+      </ul>
+    </div>
+    <div class="col-md-6">
+      <h3 class="doc-subhead">Don't</h3>
+      <ul class="a11y-list">
+        <li>Don't place either version on Dark Orange or Warm Orange.</li>
+        <li>Don't stretch, rotate, recolor or add shadows.</li>
+        <li>Don't go below 40px tall; the inner layers stop reading.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+<section class="doc-section" aria-labelledby="logo-a11y">
+  <h2 id="logo-a11y">Accessibility</h2>
+  <ul class="a11y-list" style="max-width:65ch">
+    <li>When the logo stands alone, give it alt text naming the site, for example <code>alt="Al Rajala portfolio"</code>.</li>
+    <li>When the logo sits next to the site name or inside a home link that already has text, use <code>alt=""</code> so screen readers don't say it twice.</li>
+    <li>The logo needs at least 3:1 contrast with its background. Both approved backgrounds meet this.</li>
+  </ul>
+<pre class="code"><code>&lt;a class="navbar-brand" href="index.html"&gt;
+  &lt;img src="img/logo-reverse.svg" alt="Al Rajala portfolio" width="61" height="60"&gt;
+&lt;/a&gt;</code></pre>
+</section>
+
+</div>
+</main>
+<footer class="doc-footer">
+  <div class="container-xl doc-container">HCI 472 Simple Design System · Al Rajala, November 2026 · Built with Bootstrap 5.3 from DESIGN.md</div>
+</footer>
+<script src="vendor/bootstrap.bundle.min.js"></script>
+</body>
+</html>

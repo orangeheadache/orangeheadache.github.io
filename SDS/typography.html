@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Typography · Simple Design System</title>
+<meta name="description" content="Quicksand for headings and Oxygen for navigation and body text, on a Major Third scale (ratio 1.25) from a 16px base.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&family=Quicksand:wght@400;600;700&display=swap">
+<link rel="icon" type="image/svg+xml" href="img/logo-reverse.svg">
+<link rel="stylesheet" href="vendor/bootstrap.min.css">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<header>
+<nav class="navbar navbar-expand-lg navbar-dark ds-navbar" aria-label="Design system">
+  <div class="container-xl">
+    <a class="navbar-brand" href="index.html"><img src="img/logo-reverse.svg" alt="" width="53" height="50"><span>Simple Design System</span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#siteNav" aria-controls="siteNav" aria-expanded="false" aria-label="Open navigation menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="siteNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Foundations</a>
+          <ul class="dropdown-menu dropdown-menu-end"><li><a class="dropdown-item" href="color.html">Color</a></li><li><a class="dropdown-item active" href="typography.html" aria-current="page">Typography</a></li><li><a class="dropdown-item" href="logo.html">Logo</a></li></ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="components.html">Components</a></li>
+        <li class="nav-item"><a class="nav-link" href="page-pattern.html">Page pattern</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+</header>
+<main id="main" class="doc-main">
+<div class="container-xl doc-container">
+  <p class="doc-eyebrow">Foundations</p>
+  <h1>Typographical hierarchy</h1>
+  <p class="doc-lede">Quicksand for headings and Oxygen for navigation and body text, on a Major Third scale (ratio 1.25) from a 16px base.</p>
+  
+<section class="doc-section" aria-labelledby="families">
+  <h2 id="families">Typefaces</h2>
+  <div class="row g-3">
+    <div class="col-md-6"><div class="preview-frame">
+      <p style="font-family:var(--font-heading);font-size:var(--fs-h2);font-weight:700;margin:0">Quicksand</p>
+      <p class="type-meta mb-0">Headings, chart headings. Weights 400, 600, 700. <code>var(--font-heading)</code></p>
+    </div></div>
+    <div class="col-md-6"><div class="preview-frame">
+      <p style="font-family:var(--font-body);font-size:var(--fs-h2);font-weight:400;margin:0">Oxygen</p>
+      <p class="type-meta mb-0">Navigation, Heading Five and paragraph text. Weight 400. <code>var(--font-body)</code></p>
+    </div></div>
+  </div>
+</section>
+<section class="doc-section" aria-labelledby="scale">
+  <h2 id="scale">Major Third scale</h2>
+  <p style="max-width:65ch">Every size comes from one ratio. The base is 16px, which is 1rem, and each step up multiplies by 1.25 (a Major Third). The same scale is used across the whole site.</p>
+  <div class="table-scroll">
+  <table class="table spec-table" style="font-variant-numeric:tabular-nums">
+    <thead><tr><th scope="col">Step</th><th scope="col">Formula</th><th scope="col">px</th><th scope="col">rem</th><th scope="col">Used for</th></tr></thead>
+    <tbody><tr><td>−1</td><td>16 × 1.25<sup>-1</sup></td><td>12.80px</td><td>0.800rem</td><td>Small</td></tr><tr><td>0</td><td>16 × 1.25<sup>0</sup></td><td>16.00px</td><td>1.000rem</td><td>Paragraph</td></tr><tr><td>1</td><td>16 × 1.25<sup>1</sup></td><td>20.00px</td><td>1.250rem</td><td>Heading Six, Navigation</td></tr><tr><td>2</td><td>16 × 1.25<sup>2</sup></td><td>25.00px</td><td>1.563rem</td><td>Heading Five, Chart Headings</td></tr><tr><td>3</td><td>16 × 1.25<sup>3</sup></td><td>31.25px</td><td>1.953rem</td><td>Heading Four</td></tr><tr><td>4</td><td>16 × 1.25<sup>4</sup></td><td>39.06px</td><td>2.441rem</td><td>Heading Three</td></tr><tr><td>5</td><td>16 × 1.25<sup>5</sup></td><td>48.83px</td><td>3.052rem</td><td>Heading Two</td></tr><tr><td>6</td><td>16 × 1.25<sup>6</sup></td><td>61.04px</td><td>3.815rem</td><td>Heading One</td></tr></tbody>
+  </table>
+  </div>
+  <p class="small text-body-secondary mt-2">rem values are rounded to three decimals. Below 576px wide, Heading One to Heading Three each drop one step so long titles fit on phones.</p>
+</section>
+<section class="doc-section" aria-labelledby="hierarchy">
+  <h2 id="hierarchy">Hierarchy</h2>
+  <p style="max-width:65ch">Families and weights come from the Figma text styles. Headings use a line height of 1.25 and body text 1.6.</p>
+  <div class="preview-frame"><div class="type-row">
+  <h1 class="specimen" style="font-family:var(--font-heading);font-size:var(--fs-h1);font-weight:700;line-height:1.25">Heading One</h1>
+  <div class="type-meta">
+    <strong>Quicksand 700</strong><br>Step 6 · 61.04px · 3.815rem<br>
+    <code>var(--fs-h1)</code><br>
+    Page titles
+  </div>
+</div><div class="type-row">
+  <h2 class="specimen" style="font-family:var(--font-heading);font-size:var(--fs-h2);font-weight:700;line-height:1.25">Heading Two</h2>
+  <div class="type-meta">
+    <strong>Quicksand 700</strong><br>Step 5 · 48.83px · 3.052rem<br>
+    <code>var(--fs-h2)</code><br>
+    Major sections
+  </div>
+</div><div class="type-row">
+  <h3 class="specimen" style="font-family:var(--font-heading);font-size:var(--fs-h3);font-weight:600;line-height:1.25">Heading Three</h3>
+  <div class="type-meta">
+    <strong>Quicksand 600</strong><br>Step 4 · 39.06px · 2.441rem<br>
+    <code>var(--fs-h3)</code><br>
+    Content sections (Introduction, Methods)
+  </div>
+</div><div class="type-row">
+  <h4 class="specimen" style="font-family:var(--font-heading);font-size:var(--fs-h4);font-weight:600;line-height:1.25">Heading Four</h4>
+  <div class="type-meta">
+    <strong>Quicksand 600</strong><br>Step 3 · 31.25px · 1.953rem<br>
+    <code>var(--fs-h4)</code><br>
+    Sub-sections, TL;DR label
+  </div>
+</div><div class="type-row">
+  <h5 class="specimen" style="font-family:var(--font-body);font-size:var(--fs-h5);font-weight:400;line-height:1.25">Heading Five</h5>
+  <div class="type-meta">
+    <strong>Oxygen 400</strong><br>Step 2 · 25px · 1.563rem<br>
+    <code>var(--fs-h5)</code><br>
+    Minor headings
+  </div>
+</div><div class="type-row">
+  <p class="specimen" style="font-family:var(--font-heading);font-size:var(--fs-chart);font-weight:600;line-height:1.25">Chart Headings</p>
+  <div class="type-meta">
+    <strong>Quicksand 600</strong><br>Step 2 · 25px · 1.563rem<br>
+    <code>var(--fs-chart)</code><br>
+    Overview table and TL;DR headings
+  </div>
+</div><div class="type-row">
+  <p class="specimen" style="font-family:var(--font-body);font-size:var(--fs-nav);font-weight:400;line-height:1.25">Navigation</p>
+  <div class="type-meta">
+    <strong>Oxygen 400</strong><br>Step 1 · 20px · 1.25rem<br>
+    <code>var(--fs-nav)</code><br>
+    Navbar links
+  </div>
+</div><div class="type-row">
+  <h6 class="specimen" style="font-family:var(--font-heading);font-size:var(--fs-h6);font-weight:400;line-height:1.25">Heading Six</h6>
+  <div class="type-meta">
+    <strong>Quicksand 400</strong><br>Step 1 · 20px · 1.25rem<br>
+    <code>var(--fs-h6)</code><br>
+    Labels, lede text
+  </div>
+</div><div class="type-row">
+  <p class="specimen" style="font-family:var(--font-body);font-size:var(--fs-p);font-weight:400;line-height:1.25">Paragraph</p>
+  <div class="type-meta">
+    <strong>Oxygen 400</strong><br>Step 0 · 16px · 1rem (base)<br>
+    <code>var(--fs-p)</code><br>
+    Body copy
+  </div>
+</div><div class="type-row">
+  <p class="specimen" style="font-family:var(--font-body);font-size:var(--fs-small);font-weight:400;line-height:1.25">Small</p>
+  <div class="type-meta">
+    <strong>Oxygen 400</strong><br>Step −1 · 12.8px · 0.8rem<br>
+    <code>var(--fs-small)</code><br>
+    Captions, metadata, code
+  </div>
+</div></div>
+</section>
+<section class="doc-section" aria-labelledby="type-a11y">
+  <h2 id="type-a11y">Accessibility</h2>
+  <ul class="a11y-list" style="max-width:65ch">
+    <li>Use heading levels in order (one H1 per page, no skipped levels). Pick the level for structure, then style it if needed.</li>
+    <li>Sizes are in rem, so text follows the reader's browser font size setting and survives 200% zoom.</li>
+    <li>Body text is 16px. Keep the Small step for short captions and labels, never for paragraphs.</li>
+    <li>Keep lines near 65 characters; the 632px content column does this at 16px.</li>
+    <li>Don't use Light Grey (#999999) for text: it reaches only 2.8:1 on white.</li>
+  </ul>
+</section>
+<section class="doc-section" aria-labelledby="type-css">
+  <h2 id="type-css">CSS</h2>
+<pre class="code"><code>/* Major Third: 1rem = 16px, ratio 1.25 */
+--fs-small: 0.8rem;    /* 12.8px */
+--fs-p:     1rem;      /* 16px */
+--fs-h6:    1.25rem;   /* 20px */
+--fs-h5:    1.563rem;  /* 25px, also --fs-chart */
+--fs-nav:   1.25rem;   /* 20px, same step as h6 */
+--fs-h4:    1.953rem;  /* 31.25px */
+--fs-h3:    2.441rem;  /* 39.06px */
+--fs-h2:    3.052rem;  /* 48.83px */
+--fs-h1:    3.815rem;  /* 61.04px */
+
+h1 { font: 700 var(--fs-h1)/1.25 var(--font-heading); }
+h2 { font: 700 var(--fs-h2)/1.25 var(--font-heading); }
+h3 { font: 600 var(--fs-h3)/1.25 var(--font-heading); }
+h4 { font: 600 var(--fs-h4)/1.25 var(--font-heading); }
+h5 { font: 400 var(--fs-h5)/1.3 var(--font-body); }
+.nav-link { font: 400 var(--fs-nav)/1.3 var(--font-body); }
+.chart-heading { font: 600 var(--fs-chart)/1.3 var(--font-heading); }
+h6 { font: 400 var(--fs-h6)/1.3 var(--font-heading); }
+p  { font: 400 var(--fs-p)/1.6 var(--font-body); }</code></pre>
+</section>
+
+</div>
+</main>
+<footer class="doc-footer">
+  <div class="container-xl doc-container">HCI 472 Simple Design System · Al Rajala, November 2026 · Built with Bootstrap 5.3 from DESIGN.md</div>
+</footer>
+<script src="vendor/bootstrap.bundle.min.js"></script>
+</body>
+</html>

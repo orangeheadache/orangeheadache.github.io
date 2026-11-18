@@ -1,0 +1,67 @@
+/* HCI 472 Simple Design System — design tokens
+   Source: DESIGN.md (Figma extraction, 2026-11-17).
+   Reference these variables by name; don't hardcode hex or px values. */
+:root {
+  /* Color: the 7 named swatches in the Figma "Color" section */
+  --color-black: #000000;
+  --color-dark-brown: #412804;
+  --color-dark-orange: #B75C00;   /* darkened from Figma #F29100 to pass 4.5:1 on White */
+  --color-warm-orange: #EDAA46;
+  --color-navbar-dark: #071500;
+  --color-white: #FFFFFF;
+  --color-light-grey: #999999;
+  /* Warm Orange at 30% opacity, flattened onto White so overlapping layers don't darken */
+  --color-warm-orange-30: #FAE6C8;
+  /* Supporting neutral used for image placeholders in Figma ("surface") */
+  --color-surface: #D9D9D9;
+
+  /* Semantic roles */
+  --bg: var(--color-white);
+  --text: var(--color-black);
+  --text-muted: #444444;            /* DESIGN.md text-secondary */
+  --border: var(--color-light-grey);
+  --nav-bg: var(--color-navbar-dark);
+  --nav-text: var(--color-white);
+  --link: var(--color-dark-brown);
+  --highlight: var(--color-dark-orange);
+  --highlight-soft: var(--color-warm-orange);
+  --focus-ring-light: var(--color-navbar-dark);   /* focus on light surfaces */
+  --focus-ring-dark: var(--color-warm-orange);    /* focus on dark surfaces */
+
+  /* Font families */
+  --font-heading: "Quicksand", "Trebuchet MS", system-ui, sans-serif;
+  --font-body: "Oxygen", "Segoe UI", system-ui, sans-serif;
+
+  /* Type scale: Major Third (ratio 1.25), base 16px = 1rem.
+     Each step is the one below it × 1.25. */
+  --fs-small: 0.8rem;      /* 12.8px  step −1: captions, metadata, code */
+  --fs-p: 1rem;            /* 16px    step 0: Paragraph (Oxygen 400) */
+  --fs-h6: 1.25rem;        /* 20px    step 1: Heading Six (Quicksand 400) */
+  --fs-h5: 1.563rem;       /* 25px    step 2: Heading Five (Oxygen 400) */
+  --fs-nav: 1.25rem;       /* 20px    step 1: Navigation (Oxygen 400) */
+  --fs-chart: 1.563rem;    /* 25px    step 2: Chart Headings (Quicksand 600) */
+  --fs-h4: 1.953rem;       /* 31.25px step 3: Heading Four (Quicksand 600) */
+  --fs-h3: 2.441rem;       /* 39.06px step 4: Heading Three (Quicksand 600) */
+  --fs-h2: 3.052rem;       /* 48.83px step 5: Heading Two (Quicksand 700) */
+  --fs-h1: 3.815rem;       /* 61.04px step 6: Heading One (Quicksand 700) */
+  --fs-display: var(--fs-h1);
+
+  /* Spacing: base values found in Figma are 1px and 10px */
+  --space-1: 1px;
+  --space-10: 10px;
+  --space-20: calc(var(--space-10) * 2);
+  --space-40: calc(var(--space-10) * 4);
+
+  /* Radius */
+  --radius-md: 1px;
+  --radius-lg-3: 2px;
+  --radius-lg-2: 5px;
+  --radius-lg: 10px;
+
+  /* Layout */
+  --container-desktop: 960px;
+  --container-tablet: 768px;
+  --container-phone: 377px;
+  --content-width: 632px;
+  --nav-height: 60px;
+}
